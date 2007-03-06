@@ -1,0 +1,19 @@
+abstract: Auto-create Data::Currency objects from columns.
+author: Christopher H. Laco
+build_requires: 
+  Class::Accessor::Grouped: 0.03
+  DBD::SQLite: 1.11
+distribution_type: module
+generated_by: Module::Install version 0.64
+license: perl
+name: DBIx-Class-InflateColumn-Currency
+no_index: 
+  directory: 
+    - inc
+    - t
+requires: 
+  DBIx::Class: 0.07005
+  Data::Currency: 0.03
+  perl: 5.6.1
+tests: t/*.t t/*/*.t
+version: 0.01
