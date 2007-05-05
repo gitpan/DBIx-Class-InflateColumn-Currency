@@ -1,4 +1,3 @@
-Build.PL
 Changes
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
@@ -25,7 +24,11 @@ t/lib/DBIC/Test.pm
 t/lib/DBIC/Test/Schema.pm
 t/lib/DBIC/Test/Schema/Items.pm
 t/lib/DBIC/Test/Schema/Prices.pm
+t/manifest.t
 t/pod_coverage.t
 t/pod_spelling.t
 t/pod_syntax.t
 t/sql/test.sqlite.sql
+t/strict.t
+t/style_no_tabs.t
+t/warnings.t

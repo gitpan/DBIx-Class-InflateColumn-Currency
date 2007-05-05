@@ -24,10 +24,11 @@ SYNOPSIS
         print 'Japanese Yen: ', $item->price->convert('JPY');
 
 DESCRIPTION
-    This module inflates/deflates designated column into
+    This module inflates/deflates designated columns into Data::Currency
+    objects.
 
 METHODS
-  currency_code;
+  currency_code
     Arguments: $code
 
     Gets/sets the default currency code used when inflating currency

@@ -1,7 +1,7 @@
 package DBIx::Class::InflateColumn::Currency;
 use strict;
 use warnings;
-our $VERSION = '0.01';
+our $VERSION = '0.02000';
 
 BEGIN {
     use base qw/DBIx::Class Class::Accessor::Grouped/;
@@ -73,11 +73,11 @@ Then you can treat the specified column as a Data::Currency object.
 
 =head1 DESCRIPTION
 
-This module inflates/deflates designated column into 
+This module inflates/deflates designated columns into Data::Currency objects.
 
 =head1 METHODS
 
-=head2 currency_code;
+=head2 currency_code
 
 =over
 
