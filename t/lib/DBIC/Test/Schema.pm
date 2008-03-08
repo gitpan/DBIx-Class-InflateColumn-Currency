@@ -1,4 +1,4 @@
-# $Id: Schema.pm 3096 2007-02-09 20:58:19Z claco $
+# $Id: /local/DBIx-Class-InflateColumn-Currency/t/lib/DBIC/Test/Schema.pm 1282 2007-02-09T20:58:19.038513Z claco  $
 package DBIC::Test::Schema;
 use strict;
 use warnings;

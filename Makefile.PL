@@ -1,11 +1,11 @@
-# $Id: Makefile.PL 3230 2007-05-05 02:09:49Z claco $
+# $Id: /local/DBIx-Class-InflateColumn-Currency/Makefile.PL 1294 2008-03-08T00:13:34.920932Z claco  $
 use strict;
 use warnings;
 use inc::Module::Install 0.65;
 
 name 'DBIx-Class-InflateColumn-Currency';
 license 'perl';
-perl_version '5.006001';
+perl_version '5.008001';
 all_from 'lib/DBIx/Class/InflateColumn/Currency.pm';
 
 requires 'DBIx::Class'    => '0.07005'; 
@@ -22,4 +22,5 @@ eval {
 };
 
 auto_install;
-WriteAll;
+
+WriteMakefile;

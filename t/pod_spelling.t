@@ -1,5 +1,5 @@
 #!perl -w
-# $Id: pod_spelling.t 3230 2007-05-05 02:09:49Z claco $
+# $Id: /local/DBIx-Class-InflateColumn-Currency/t/pod_spelling.t 1291 2007-05-06T04:01:10.485106Z claco  $
 use strict;
 use warnings;
 

@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: manifest.t 3230 2007-05-05 02:09:49Z claco $
+# $Id: /local/DBIx-Class-InflateColumn-Currency/t/manifest.t 1294 2008-03-08T00:13:34.920932Z claco  $
 use strict;
 use warnings;
 
@@ -17,6 +17,6 @@ BEGIN {
 
 ok_manifest({
     exclude => ['/t/var', '/cover_db'],
-    filter  => [qr/\.svn/, qr/cover/, qr/Build(.(PL|bat))?/, qr/_build/],
+    filter  => [qr/\.svn/, qr/cover/, qr/Build(.(PL|bat))?/, qr/_build/, qr/\.tmproj/],
     bool    => 'or'
 });

@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: strict.t 3230 2007-05-05 02:09:49Z claco $
+# $Id: /local/DBIx-Class-InflateColumn-Currency/t/strict.t 1286 2007-05-05T02:09:49.782972Z claco  $
 use strict;
 use warnings;
 

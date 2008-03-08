@@ -1,11 +1,12 @@
 --- 
 abstract: Auto-create Data::Currency objects from columns.
-author: Christopher H. Laco
+author: 
+  - Christopher H. Laco
 build_requires: 
   Class::Accessor::Grouped: 0.03
   DBD::SQLite: 1.11
 distribution_type: module
-generated_by: Module::Install version 0.65
+generated_by: Module::Install version 0.68
 license: perl
 meta-spec: 
   url: http://module-build.sourceforge.net/META-spec-v1.3.html
@@ -18,6 +19,6 @@ no_index:
 requires: 
   DBIx::Class: 0.07005
   Data::Currency: 0.03
-  perl: 5.6.1
+  perl: 5.8.1
 tests: t/*.t t/*/*.t
-version: 0.02001
+version: 0.02002

@@ -1,5 +1,8 @@
 Revision history for DBIx::Class::InflateColumn::Currency
 
+0.02002 Fri Mar 7 19:12:33 2008
+    - Fixed CPANTS bogus META
+
 0.02001 Fri May 04 21:49:24 2007
     - Removed MANIFEST from source control
     - Updated to Module::Install 0.65

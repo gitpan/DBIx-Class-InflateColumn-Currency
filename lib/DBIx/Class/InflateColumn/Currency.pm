@@ -1,7 +1,7 @@
 package DBIx::Class::InflateColumn::Currency;
 use strict;
 use warnings;
-our $VERSION = '0.02001';
+our $VERSION = '0.02002';
 
 BEGIN {
     use base qw/DBIx::Class Class::Accessor::Grouped/;
