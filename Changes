@@ -1,5 +1,10 @@
 Revision history for DBIx::Class::InflateColumn::Currency
 
+0.02004 Mon Apr 22 21:22:44 2008
+    - Fix test failure under SQL::Translator <= 0.07
+    - Removed Build.PL now that Module::Install no longer supports it
+    - Removed bogus tests entry in Makefile.PL
+
 0.02002 Fri Mar 7 19:12:33 2008
     - Fixed CPANTS bogus META
 

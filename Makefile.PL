@@ -1,4 +1,4 @@
-# $Id: /local/DBIx-Class-InflateColumn-Currency/Makefile.PL 1294 2008-03-08T00:13:34.920932Z claco  $
+# $Id: /local/DBIx-Class-InflateColumn-Currency/Makefile.PL 1540 2008-04-23T01:28:49.429063Z claco  $
 use strict;
 use warnings;
 use inc::Module::Install 0.65;
@@ -14,7 +14,7 @@ requires 'Data::Currency' => '0.03';
 build_requires 'DBD::SQLite'              => '1.11';
 build_requires 'Class::Accessor::Grouped' => '0.03';
 
-tests "t/*.t t/*/*.t";
+tests 't/*.t';
 clean_files "DBIx-Class-InflateColumn-Currency-* t/var";
 
 eval {
