@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: /local/DBIx-Class-InflateColumn-Currency/t/currency.t 1283 2007-03-05T23:04:49.799305Z claco  $
+# $Id: /local/DBIx-Class-InflateColumn-Currency/t/currency.t 1669 2008-06-05T01:46:49.816545Z claco  $
 use strict;
 use warnings;
 
@@ -64,9 +64,9 @@ my $schema = DBIC::Test->init_schema;
     isa_ok($item->dec_currency, 'Data::Currency');
     is($item->dec_currency->code, 'USD', 'code from currency_code attribute');
     is($item->dec_currency->name, 'US Dollar');
-    is($item->dec_currency->value, 1.23);
+    is(round($item->dec_currency->value), 1.23);
     is($item->dec_currency, '$1.23');
-    is($item->dec_currency + 1, 2.23);
+    is(round($item->dec_currency + 1), 2.23);
 
     $item = $items->next;
     isa_ok($item, 'DBIC::TestSchema::Items');
@@ -94,9 +94,9 @@ my $schema = DBIC::Test->init_schema;
     isa_ok($item->dec_currency, 'Data::Currency');
     is($item->dec_currency->code, 'CAD', 'code from currency_code attribute');
     is($item->dec_currency->name, 'Canadian Dollar', 'This might fail due to core Locale w/msipelling');
-    is($item->dec_currency->value, 2.34);
+    is(round($item->dec_currency->value), 2.34);
     is($item->dec_currency, '$2.34');
-    is($item->dec_currency + 1, 3.34);
+    is(round($item->dec_currency + 1), 3.34);
 
     $item = $items->next;
     isa_ok($item, 'DBIC::TestSchema::Items');
@@ -124,9 +124,9 @@ my $schema = DBIC::Test->init_schema;
     isa_ok($item->dec_currency, 'Data::Currency');
     is($item->dec_currency->code, 'NPR', 'code from currency_code attribute');
     is($item->dec_currency->name, 'Nepalese Rupee');
-    is($item->dec_currency->value, 3.45);
+    is(round($item->dec_currency->value), 3.45);
     is($item->dec_currency, 'Rs. 3.45');
-    is($item->dec_currency + 1, 4.45);
+    is(round($item->dec_currency + 1), 4.45);
 
 
     ## create with values
@@ -163,9 +163,9 @@ my $schema = DBIC::Test->init_schema;
     isa_ok($row1->dec_currency, 'Data::Currency');
     is($row1->dec_currency->code, 'PHP', 'code from currency_code attribute');
     is($row1->dec_currency->name, 'Philippine Peso');
-    is($row1->dec_currency->value, 4.56);
+    is(round($row1->dec_currency->value), 4.56);
     is($row1->dec_currency, 'PHP4.56');
-    is($row1->dec_currency + 1, 5.56);
+    is(round($row1->dec_currency + 1), 5.56);
 
 
     ## create with objects/deflate
@@ -202,9 +202,9 @@ my $schema = DBIC::Test->init_schema;
     isa_ok($row2->dec_currency, 'Data::Currency');
     is($row2->dec_currency->code, 'USD', 'code from object not inflate');
     is($row2->dec_currency->name, 'US Dollar');
-    is($row2->dec_currency->value, 5.67);
+    is(round($row2->dec_currency->value), 5.67);
     is($row2->dec_currency, '$5.67');
-    is($row2->dec_currency + 1, 6.67);
+    is(round($row2->dec_currency + 1), 6.67);
 };
 
 
@@ -243,9 +243,9 @@ my $schema = DBIC::Test->init_schema;
     isa_ok($price->dec_currency, 'Data::Currency::Custom');
     is($price->dec_currency->code, 'TZS', 'code from class');
     is($price->dec_currency->name, 'Tanzanian Shilling');
-    is($price->dec_currency->value, 1.23);
+    is(round($price->dec_currency->value), 1.23);
     is($price->dec_currency, '1.23 Tanzanian Shilling');
-    is($price->dec_currency + 1, 2.23);
+    is(round($price->dec_currency + 1), 2.23);
 
     $price = $prices->next;
     isa_ok($price, 'DBIC::TestSchema::Prices');
@@ -273,9 +273,9 @@ my $schema = DBIC::Test->init_schema;
     isa_ok($price->dec_currency, 'Data::Currency::Custom');
     is($price->dec_currency->code, 'CAD', 'code from currency_code attribute');
     is($price->dec_currency->name, 'Canadian Dollar', 'This might fail due to core Locale w/msipelling');
-    is($price->dec_currency->value, 2.34);
+    is(round($price->dec_currency->value), 2.34);
     is($price->dec_currency, '2.34 Canadian Dollar');
-    is($price->dec_currency + 1, 3.34);
+    is(round($price->dec_currency + 1), 3.34);
 
     $price = $prices->next;
     isa_ok($price, 'DBIC::TestSchema::Prices');
@@ -303,9 +303,9 @@ my $schema = DBIC::Test->init_schema;
     isa_ok($price->dec_currency, 'Data::Currency::Custom');
     is($price->dec_currency->code, 'NPR', 'code from currency_code attribute');
     is($price->dec_currency->name, 'Nepalese Rupee');
-    is($price->dec_currency->value, 3.45);
+    is(round($price->dec_currency->value), 3.45);
     is($price->dec_currency, '3.45 Nepalese Rupee');
-    is($price->dec_currency + 1, 4.45);
+    is(round($price->dec_currency + 1), 4.45);
 
 
     ## create with values
@@ -342,9 +342,9 @@ my $schema = DBIC::Test->init_schema;
     isa_ok($row1->dec_currency, 'Data::Currency::Custom');
     is($row1->dec_currency->code, 'PHP', 'code from currency_code attribute');
     is($row1->dec_currency->name, 'Philippine Peso');
-    is($row1->dec_currency->value, 4.56);
+    is(round($row1->dec_currency->value), 4.56);
     is($row1->dec_currency, '4.56 Philippine Peso');
-    is($row1->dec_currency + 1, 5.56);
+    is(round($row1->dec_currency + 1), 5.56);
 
 
     ## create with objects/deflate
@@ -381,7 +381,21 @@ my $schema = DBIC::Test->init_schema;
     isa_ok($row2->dec_currency, 'Data::Currency::Custom');
     is($row2->dec_currency->code, 'USD', 'code from object not inflate');
     is($row2->dec_currency->name, 'US Dollar');
-    is($row2->dec_currency->value, 5.67);
+    is(round($row2->dec_currency->value), 5.67);
     is($row2->dec_currency, '$5.67');
-    is($row2->dec_currency + 1, 6.67);
+    is(round($row2->dec_currency + 1), 6.67);
 };
+
+sub round {
+    my ($number, $precision) = @_;
+    
+    $precision = 2 unless defined $precision;
+    $number    = 0 unless defined $number;
+
+    my $sign = $number <=> 0;
+    my $multiplier = (10 ** $precision);
+    my $result = abs($number);
+    $result = int(($result * $multiplier) + .5000001) / $multiplier;
+    $result = -$result if $sign < 0;
+    return $result;
+}
